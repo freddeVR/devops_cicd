@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: flask-server-pod
+  labels:
+    environment: test
+    app: my_flask
+spec:
+  containers:
+    - name: my-flask
+      image: ghcr.io/your_username/my_flask:latest
+  imagePullSecrets:
+    - name: regcred
